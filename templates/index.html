@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Analysis</title>
+    <style>
+        body {
+            background-color: #E7E7E7; 
+        }
+        h1 {
+            text-align: center;
+            fort-size: 30px;
+            color: #B80000;
+            
+        }
+
+        .center-button {
+            text-align: center;
+            background-color: #838383; 
+            color: white;
+            padding: 10px 20px; 
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        
+
+        .center-list {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #190098;
+        }
+
+        .center-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .center-list a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0262AD;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Cricket Analysis (BDAT1004)</h1>
+    <br>
+    <div class="center-button">
+        <form method="POST" action="{{ url_for('update_data') }}">
+            <button type="submit">Update Data</button>
+        </form>
+    </div>
+    <br>
+    <div class="center-list">
+        <p>Choose an analysis:</p>
+        <ul>
+            <li><a href="{{ url_for('top_players_runs') }}">Top Players by Runs</a></li>
+            <br>
+            <li><a href="{{ url_for('top_players_avg') }}">Top Players by Batting Average</a></li>
+            <br>
+            <li><a href="{{ url_for('top_players_notout') }}">Top Players with Highest Not Outs</a></li>
+            <br>
+            <li><a href="{{ url_for('top_players_highestscore') }}">Top Players with Highest Score</a></li>
+            <br>
+            <li><a href="{{ url_for('top_hitters') }}">Top 10 Hitters</a></li>
+            <br>
+            <li><a href="{{ url_for('top_centuries') }}">Top 10 Players Scored Most Centuries</a></li>
+            <br>
+            <li><a href="{{ url_for('top_fifties') }}">Top 10 Players Scored Most Fifties</a></li>
+            <br>
+            <li><a href="{{ url_for('no_6s') }}">Top 10 Six Hitters</a></li>
+            <br>
+            <li><a href="{{ url_for('no_4s') }}">Top 10 Four Hitters</a></li>
+            <br>
+            <li><a href="{{ url_for('runs_per_ball') }}">Top 10 Batsmen - Runs per Ball</a></li>
+            <br>
+            <li><a href="{{ url_for('runs_per_innings') }}">Top 10 Batsmans with Hihgest Average Runs per Innings</a></li>
+        </ul>
+    </div>
+    
+    <br>
+    
+    
+</body>
+</html>
+
